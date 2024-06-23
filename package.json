@@ -24,7 +24,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -32,9 +34,18 @@
       "react-app/jest"
     ],
     "rules": {
-      "@typescript-eslint/comma-dangle": ["error", "only-multiline"],
-      "@typescript-eslint/semi": ["error", "always"],
-      "object-curly-spacing": ["error", "always"]
+      "@typescript-eslint/comma-dangle": [
+        "error",
+        "only-multiline"
+      ],
+      "@typescript-eslint/semi": [
+        "error",
+        "always"
+      ],
+      "object-curly-spacing": [
+        "error",
+        "always"
+      ]
     }
   },
   "browserslist": {
@@ -48,5 +59,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "devDependencies": {
+    "gh-pages": "^6.1.1"
+  },
+  "homepage": "https://s1ckgit.github.io/vk-music-test/"
 }
