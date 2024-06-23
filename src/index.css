@@ -1,13 +1,60 @@
-body {
+:root {
+  --vkui--font_headline1--font_family--regular: 'Roboto';
+  --vkui--font_footnote--font_family--regular: 'Roboto';
+
+}
+
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.vkuiAppRoot {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  padding: 51px 42px 57px 43px;
+  width: 445px;
+  
+  border-radius: 10px;
+  border: 1px #FFFFFF1A solid;
+  background-color: white;
+}
+
+.cover-overlay::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #00000099;
+  border-radius: 4px;
+  opacity: 0;
+  transition: opacity 0.1s;
+}
+
+.cover-overlay_on::after {
+  opacity: 1;
+}
+
+.cover-icon {
+  position: absolute;
+  top: 15px;
+  left: 10px;
+  visibility: hidden;
+}
+
+.cover-icon_on {
+  visibility: visible;
 }
